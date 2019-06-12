@@ -1,4 +1,4 @@
-test request-approval (react) - CRA
+<h2>test request-approval (react) - built with create-react-app</h2>
 
 cd ~/request-approval-test
 
