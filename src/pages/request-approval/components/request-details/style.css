@@ -1,0 +1,121 @@
+.request-details {
+  padding: 1rem;
+  grid-area: requestDetails;
+  font-size: var(--size-font-normal);
+  font-weight: 500;
+}
+
+.request-details__main {
+  border: 1px solid var(--col-grey-separator);
+  border-radius: 8px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.02), 0 6px 6px rgba(0, 0, 0, 0.02);
+}
+
+.request-details .profile-picture {
+  line-height: 0;
+  margin-left: 0.6rem;
+}
+
+.request-details .profile-picture > img {
+  max-height: 24px;
+  width: auto;
+}
+
+.request-details .label {
+  padding: 1rem 0.6rem;
+  min-width: 130px;
+  color: var(--col-label-text);
+}
+
+.request-details .value {
+  padding: 1rem 0.6rem;
+  color: var(--col-primary-text);
+  font-weight: 500;
+}
+
+.request-details .row {
+  align-items: center;
+  border-bottom: 1px solid var(--col-grey-separator);
+}
+
+.request-details .row:last-child {
+  border-bottom: 0;
+}
+
+.request-details .renewal__label,
+.request-details .annual-cost__label {
+  width: auto;
+}
+
+.annual-cost__row,
+.renewal__row {
+  width: 100%;
+}
+
+.renewal-annual-cost__row {
+  display: block;
+}
+
+.renewal__row {
+  border-bottom: 1px solid var(--col-grey-separator);
+}
+
+.file_row {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .renewal-annual-cost__row {
+    display: flex;
+  }
+
+  .file_row {
+    display: flex;
+  }
+
+  .annual-cost__row {
+    border-left: 1px solid var(--col-grey-separator);
+  }
+
+  .annual-cost__row,
+  .renewal__row {
+    width: 50%;
+  }
+
+  .renewal__row {
+    border-bottom: none;
+  }
+}
+
+.request-details .file img {
+  max-height: 24px;
+  margin-right: 0.6rem;
+}
+
+.request-details .file__label {
+  margin-bottom: auto;
+}
+
+.request-details .file {
+  display: flex;
+  flex-direction: column;
+}
+
+.request-details .file > a {
+  display: flex;
+  align-items: center;
+  margin-bottom: 0.6rem;
+  text-decoration: none;
+  color: inherit;
+}
+
+.request-details .file > a:last-child {
+  margin-bottom: 0;
+}
+
+.request-details .additional-message {
+  font-size: var(--size-font-small);
+  color: var(--col-primary-warning);
+  font-weight: 500;
+  padding: 1rem 0;
+}

@@ -1,0 +1,22 @@
+.request-header > .logo {
+  max-width: 24px;
+  height: auto;
+  margin-right: 0.6rem;
+  line-height: 0;
+}
+
+.logo img {
+  width: 100%;
+  height: auto;
+}
+
+.request-header {
+  align-items: center;
+  padding: 1.25rem;
+  border-bottom: 1px solid var(--col-grey-separator);
+}
+
+.request-header h2 {
+  font-size: var(--size-font-large);
+  font-weight: 500;
+}

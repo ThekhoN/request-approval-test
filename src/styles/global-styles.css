@@ -1,0 +1,29 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "S FPro Display", "Roboto", sans-serif;
+}
+
+:root {
+  --size-font-large: 16px;
+  --size-font-normal: 14px;
+  --size-font-small: 12px;
+  --col-primary-text: #222222;
+  --col-label-text: #909090;
+  --col-grey-bg: #f9fafb;
+  --col-grey-separator: #f4f4f4;
+  --padding-common-req-approval: 1.25rem;
+  --col-primary-warning: #ff6448;
+}
+
+.flex {
+  display: flex;
+}
+
+.flex-vertical-align {
+  align-items: center;
+}

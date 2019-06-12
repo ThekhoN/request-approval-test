@@ -1,0 +1,87 @@
+.approvals {
+  font-size: var(--size-font-normal);
+  padding: 1rem;
+  border-left: 1px solid var(--col-grey-separator);
+  counter-reset: approver-list-counter;
+  grid-area: approvals;
+  border-top: 1px solid var(--col-grey-separator);
+}
+
+@media (min-width: 768px) {
+  .approvals {
+    border-top: none;
+  }
+}
+
+.approvals .approvals-row {
+  padding: 1rem 0;
+}
+
+.approvals .name {
+  font-weight: 500;
+  margin-right: 0.6rem;
+  margin-bottom: 0.3rem;
+}
+
+.approvals .email,
+.approvals .activity-last-update {
+  font-size: var(--size-font-small);
+  color: var(--col-label-text);
+}
+
+.approvals .profile-picture {
+  line-height: 0;
+  width: 24px;
+  margin-right: 0.6rem;
+}
+
+.approvals .profile-picture > img {
+  max-width: 24px;
+}
+
+.approvals li {
+  padding-left: 1.6rem;
+  position: relative;
+}
+
+.approvals ul li:before {
+  content: counter(approver-list-counter);
+  width: 14px;
+  height: 14px;
+  margin-right: 0.6rem;
+  color: var(--col-label-text);
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  counter-increment: approver-list-counter;
+  z-index: 1;
+}
+
+.approvals ul li:after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  background: #e8e8e8;
+  border-radius: 90px;
+  left: 0;
+}
+
+.approval-list {
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--col-grey-separator);
+}
+
+.approval-list:last-child {
+  border-bottom: 0;
+}
+
+.approval-list h3 {
+  font-size: var(--size-font-small);
+  color: var(--col-label-text);
+}
+
+.is-approved-status {
+  margin-left: auto;
+}

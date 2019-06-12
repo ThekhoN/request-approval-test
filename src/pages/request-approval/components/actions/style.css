@@ -1,0 +1,49 @@
+.actions {
+  grid-area: actions;
+  background: var(--col-grey-bg);
+  border-top: 1px solid var(--col-grey-separator);
+  padding: 1rem;
+  justify-content: space-around;
+}
+
+.actions button {
+  cursor: pointer;
+  border: none;
+  outline: none;
+  background: none;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 32px;
+  border-radius: 8px;
+}
+
+.actions > button.approve {
+  width: 45%;
+  background-color: #26c281;
+  margin-right: 0.02%;
+}
+
+.actions > button.deny {
+  width: 45%;
+  background-color: var(--col-primary-warning);
+}
+
+@media (min-width: 768px) {
+  .actions {
+    grid-area: actions;
+    background: white;
+    border-top: none;
+    justify-content: flex-start;
+  }
+
+  .actions > button.approve {
+    width: 84px;
+    margin-right: 0.5rem;
+  }
+
+  .actions > button.deny {
+    width: 64px;
+  }
+}

@@ -1,0 +1,18 @@
+.security-message {
+  font-size: var(--size-font-small);
+  font-weight: 500;
+  margin-bottom: 1rem;
+}
+
+.security-message > span {
+  display: block;
+  color: #ffa03d;
+  margin-right: 0.3rem;
+  margin-bottom: 0.3rem;
+}
+
+@media (min-width: 768px) {
+  .security-message > span {
+    display: inline;
+  }
+}
