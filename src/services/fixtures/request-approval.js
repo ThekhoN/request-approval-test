@@ -57,7 +57,6 @@ export const data = {
   cost: 400,
   spend_limit: 1500,
   files: [
-    "https://staging-airbase.s3.amazonaws.com/company_38dd77/subscription_155/eclipse.jpg",
     "https://staging-airbase.s3.amazonaws.com/company_38dd77/subscription_155/eclipse.jpg"
   ]
 };

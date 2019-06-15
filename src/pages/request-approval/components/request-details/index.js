@@ -2,16 +2,7 @@ import React from "react";
 import "./style.css";
 import { getPluralStringForValue, getFileNameFromFileUrl } from "../../utils";
 import TextWithEllipsis from "../../../../components/text-with-ellipsis";
-
-const renderAdditionalMessage = usage_count => {
-  if (usage_count) {
-    return (
-      <div className="additional-message">
-        Your company is already running {usage_count} instances of this service.
-      </div>
-    );
-  }
-};
+import { renderAdditionalMessage, renderFileExtensionThumbnail } from "./utils";
 
 const RequestDetails = ({ details }) => {
   const {
@@ -65,12 +56,19 @@ const RequestDetails = ({ details }) => {
         <div className=" file_row row">
           <div className="label file__label">File</div>
           <div className="file value">
-            {files.map((file, index) => (
-              <a key={index} href={file} download>
-                <img src={file} alt="file" />
-                {getFileNameFromFileUrl(file)}
-              </a>
-            ))}
+            {files.map((file, index) => {
+              const fileName = getFileNameFromFileUrl(file);
+              const fileExtension = fileName.slice(
+                fileName.lastIndexOf(".") + 1
+              );
+
+              return (
+                <a key={index} href={file} download title={fileName}>
+                  {renderFileExtensionThumbnail(fileExtension)}
+                  {fileName}
+                </a>
+              );
+            })}
           </div>
         </div>
         <div className="flex description_row row">
