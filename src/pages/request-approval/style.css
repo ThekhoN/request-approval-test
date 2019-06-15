@@ -1,12 +1,14 @@
 .request-approval {
   background: var(--col-grey-bg);
   color: var(--col-primary-text);
-  padding: 1.6rem 1rem 0 1rem;
+  padding: 1.6rem 0 1rem 0;
 }
 
 .request-approval > .airbase-logo {
   border-bottom: 1px solid var(--col-grey-separator);
   padding-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .request-approval__main {
@@ -22,10 +24,12 @@
     "actions";
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .request-approval > .airbase-logo {
     border-bottom: none;
     padding-bottom: 0;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 
   .request-approval {

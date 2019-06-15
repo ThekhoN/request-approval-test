@@ -30,7 +30,7 @@
   background-color: var(--col-primary-warning);
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .actions {
     grid-area: actions;
     background: white;

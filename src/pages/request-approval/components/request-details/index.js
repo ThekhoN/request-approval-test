@@ -1,6 +1,7 @@
 import React from "react";
 import "./style.css";
 import { getPluralStringForValue, getFileNameFromFileUrl } from "../../utils";
+import TextWithEllipsis from "../../../../components/text-with-ellipsis";
 
 const renderAdditionalMessage = usage_count => {
   if (usage_count) {
@@ -19,14 +20,13 @@ const RequestDetails = ({ details }) => {
     profile_picture,
     cost,
     renewal_frequency_in_months,
-    spend_limit,
     expense_account,
     files,
     description,
     usage_count
   } = details;
 
-  const fullName = last_name ? first_name + " " + first_name : first_name;
+  const fullName = last_name ? first_name + " " + last_name : first_name;
   return (
     <div className="request-details">
       <div className="request-details__main">
@@ -36,7 +36,9 @@ const RequestDetails = ({ details }) => {
             <div className="profile-picture">
               <img src={profile_picture} alt={fullName} />
             </div>
-            <div className="full-name value">{fullName}</div>
+            <div className="name value">
+              <TextWithEllipsis content={fullName} />
+            </div>
           </div>
         </div>
         <div className="flex cost__row row">
@@ -53,7 +55,7 @@ const RequestDetails = ({ details }) => {
           </div>
           <div className="annual-cost__row flex">
             <div className="label annual-cost__label">Annual Cost</div>
-            <div className="annual-cost value">${spend_limit}</div>
+            <div className="annual-cost value">${cost * 12}</div>
           </div>
         </div>
         <div className="flex expense-account_row row">

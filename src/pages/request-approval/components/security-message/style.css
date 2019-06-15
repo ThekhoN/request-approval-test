@@ -2,6 +2,8 @@
   font-size: var(--size-font-small);
   font-weight: 500;
   margin-bottom: 1rem;
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
 
 .security-message > span {
@@ -11,8 +13,10 @@
   margin-bottom: 0.3rem;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .security-message > span {
     display: inline;
+    padding-left: 0rem;
+    padding-right: 0rem;
   }
 }

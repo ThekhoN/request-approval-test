@@ -7,7 +7,17 @@
   border-top: 1px solid var(--col-grey-separator);
 }
 
-@media (min-width: 768px) {
+.approvals .name > .text-with-ellipsis {
+  max-width: 100px;
+}
+
+@media (min-width: 480px) {
+  .approvals .name > .text-with-ellipsis {
+    max-width: 200px;
+  }
+}
+
+@media (min-width: 980px) {
   .approvals {
     border-top: none;
   }
@@ -78,6 +88,7 @@
 }
 
 .approval-list h3 {
+  font-weight: 500;
   font-size: var(--size-font-small);
   color: var(--col-label-text);
 }

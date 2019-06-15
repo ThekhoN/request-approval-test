@@ -5,6 +5,10 @@
   font-weight: 500;
 }
 
+.request-details .name > .text-with-ellipsis {
+  min-width: 140px;
+}
+
 .request-details__main {
   border: 1px solid var(--col-grey-separator);
   border-radius: 8px;
@@ -64,7 +68,7 @@
   display: none;
 }
 
-@media (min-width: 768px) {
+@media (min-width: 980px) {
   .renewal-annual-cost__row {
     display: flex;
   }

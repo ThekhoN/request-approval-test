@@ -1,5 +1,6 @@
 import React from "react";
 import CustomRoundedCheckbox from "../../../../components/custom-rounded-checkbox";
+import TextWithEllipsis from "../../../../components/text-with-ellipsis";
 import { getHeaderContent, getActivityLastUpdateContent } from "./utils";
 import "./style.css";
 
@@ -10,7 +11,7 @@ const ApprovalList = ({ data, type }) => {
       <ul className={`approval-list__wrapper ${type}`}>
         {data.map((item, index) => {
           const fullName = item.approver.last_name
-            ? item.approver.first_name + " " + item.approver.first_name
+            ? item.approver.first_name + " " + item.approver.last_name
             : item.approver.first_name;
           const email = item.approver.email ? `(${item.approver.email})` : "";
           return (
@@ -20,7 +21,9 @@ const ApprovalList = ({ data, type }) => {
               </div>
               <div className="name-email-activity__wrapper">
                 <div className="flex">
-                  <div className="name">{fullName} </div>
+                  <div className="name">
+                    <TextWithEllipsis content={fullName} />
+                  </div>
                   <div className="email">{email}</div>
                 </div>
                 <div className="activity-last-update">
