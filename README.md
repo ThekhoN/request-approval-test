@@ -2,6 +2,8 @@
 
 -> clone repo
 
+$npm install
+
 -> cd ~/request-approval-test
 
 $npm start
